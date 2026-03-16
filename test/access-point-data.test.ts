@@ -108,6 +108,22 @@ const MOCK_ACCESS_POINTS: AccessPoint[] = [
     longitude: 123.0190,
     has_atm: false,
   },
+  {
+    id: "7",
+    institution_name: "BDO UNIBANK",
+    branch_name: "MANILA MAIN",
+    industry: "BANK",
+    address: "Binondo, Manila",
+    town: "CITY OF MANILA",
+    province: "1ST DIST M.M.",
+    region: "NATIONAL CAPITAL REGION",
+    psgc_muni_code: "1380600000",
+    region_code: "1300000000",
+    province_code: "1380000000",
+    latitude: 14.5995,
+    longitude: 120.9842,
+    has_atm: true,
+  },
 ];
 
 const MOCK_POPULATION: PopulationLookup = {
@@ -181,6 +197,28 @@ const MOCK_POPULATION: PopulationLookup = {
     region_code: "0600000000",
     province_code: "0604500000",
   },
+  // Manila city + SubMun districts for parent-coverage test
+  "1380600000": {
+    name: "City of Manila",
+    level: "City",
+    population: 1902590,
+    region_code: "1300000000",
+    province_code: "1380000000",
+  },
+  "1380601000": {
+    name: "Tondo I/II",
+    level: "SubMun",
+    population: 637942,
+    region_code: "1300000000",
+    province_code: "1380000000",
+  },
+  "1380606000": {
+    name: "Sampaloc",
+    level: "SubMun",
+    population: 398396,
+    region_code: "1300000000",
+    province_code: "1380000000",
+  },
 };
 
 // --- searchAccessPoints ---
@@ -188,7 +226,7 @@ const MOCK_POPULATION: PopulationLookup = {
 describe("searchAccessPoints", () => {
   it("finds access points by institution name", () => {
     const results = searchAccessPoints(MOCK_ACCESS_POINTS, { query: "BDO" });
-    expect(results.length).toBe(3);
+    expect(results.length).toBe(4);
     expect(results.every((ap) => ap.institution_name === "BDO UNIBANK")).toBe(true);
   });
 
@@ -214,7 +252,7 @@ describe("searchAccessPoints", () => {
       query: "BDO",
       region: "NATIONAL CAPITAL REGION",
     });
-    expect(results.length).toBe(3);
+    expect(results.length).toBe(4);
   });
 
   it("filters by industry", () => {
@@ -283,7 +321,7 @@ describe("getCoverage", () => {
       psgc_code: "1300000000",
     });
     expect(result).not.toBeNull();
-    expect(result!.total_access_points).toBe(4);
+    expect(result!.total_access_points).toBe(5);
     expect(result!.unique_institutions).toBe(2);
   });
 
@@ -293,7 +331,7 @@ describe("getCoverage", () => {
       industry: "BANK",
     });
     expect(result).not.toBeNull();
-    expect(result!.total_access_points).toBe(2);
+    expect(result!.total_access_points).toBe(3);
   });
 
   it("returns null for unknown PSGC code", () => {
@@ -351,6 +389,81 @@ describe("findUnbankedAreas", () => {
     const results = findUnbankedAreas(MOCK_ACCESS_POINTS, MOCK_POPULATION, { limit: 1 });
     expect(results.length).toBeLessThanOrEqual(1);
   });
+
+  it("excludes SubMun districts when parent city is served", () => {
+    const results = findUnbankedAreas(MOCK_ACCESS_POINTS, MOCK_POPULATION, {});
+    const tondo = results.find((r) => r.psgc_code === "1380601000");
+    const sampaloc = results.find((r) => r.psgc_code === "1380606000");
+    expect(tondo).toBeUndefined();
+    expect(sampaloc).toBeUndefined();
+  });
+
+  it("includes SubMun districts when parent city is unserved", () => {
+    // Remove the Manila access point so parent city has no coverage
+    const apWithoutManila = MOCK_ACCESS_POINTS.filter((ap) => ap.id !== "7");
+    const results = findUnbankedAreas(apWithoutManila, MOCK_POPULATION, {});
+    const tondo = results.find((r) => r.psgc_code === "1380601000");
+    expect(tondo).toBeDefined();
+    expect(tondo!.area_name).toBe("Tondo I/II");
+  });
+
+  it("includes SubMun districts when derived parent code is not a City", () => {
+    // Simulate a SubMun whose derived parent code resolves to a non-City
+    // entry (e.g. a Province). The SubMun should NOT be skipped.
+    const popWithBadParent: PopulationLookup = {
+      ...MOCK_POPULATION,
+      "9990100000": {
+        name: "Fake SubMun",
+        level: "SubMun",
+        population: 100000,
+        region_code: "9900000000",
+        province_code: "9990000000",
+      },
+      // Derived parent "9990100000".slice(0,5)+"00000" = "9990100000" is itself,
+      // but let's set the real parent at "9990100000" -> slice = "99901" + "00000"
+      // which is "9990100000" (self). So use a different code structure:
+      "9990201000": {
+        name: "Orphan SubMun",
+        level: "SubMun",
+        population: 80000,
+        region_code: "9900000000",
+        province_code: "9990000000",
+      },
+      // Derived parent: "99902" + "00000" = "9990200000" -> Province, not City
+      "9990200000": {
+        name: "Fake Province Entry",
+        level: "Prov",
+        population: 500000,
+        region_code: "9900000000",
+        province_code: "9990200000",
+      },
+    };
+    // Add an access point so the province code is "served"
+    const apWithFakeServed: AccessPoint[] = [
+      ...MOCK_ACCESS_POINTS,
+      {
+        id: "99",
+        institution_name: "FAKE BANK",
+        branch_name: "FAKE",
+        industry: "BANK",
+        address: "Fake",
+        town: "FAKE TOWN",
+        province: "FAKE",
+        region: "FAKE REGION",
+        psgc_muni_code: "9990200000",
+        region_code: "9900000000",
+        province_code: "9990000000",
+        latitude: 0,
+        longitude: 0,
+        has_atm: false,
+      },
+    ];
+    const results = findUnbankedAreas(apWithFakeServed, popWithBadParent, {});
+    // "9990200000" is served but it's a Prov, not City, so SubMun should NOT be skipped
+    const orphan = results.find((r) => r.psgc_code === "9990201000");
+    expect(orphan).toBeDefined();
+    expect(orphan!.area_name).toBe("Orphan SubMun");
+  });
 });
 
 // --- findUnderservedAreas ---
@@ -407,9 +520,9 @@ describe("getInstitutionFootprint", () => {
     });
     expect(result).not.toBeNull();
     expect(result!.institution_name).toBe("BDO UNIBANK");
-    expect(result!.total_access_points).toBe(3);
-    expect(result!.with_atm).toBe(3);
-    expect(result!.by_industry["BANK"]).toBe(2);
+    expect(result!.total_access_points).toBe(4);
+    expect(result!.with_atm).toBe(4);
+    expect(result!.by_industry["BANK"]).toBe(3);
     expect(result!.by_industry["ATM ONLY"]).toBe(1);
   });
 
@@ -431,7 +544,7 @@ describe("getInstitutionFootprint", () => {
     const result = getInstitutionFootprint(MOCK_ACCESS_POINTS, {
       institution_name: "BDO",
     });
-    expect(result!.by_region["NATIONAL CAPITAL REGION"]).toBe(3);
+    expect(result!.by_region["NATIONAL CAPITAL REGION"]).toBe(4);
   });
 });
 
