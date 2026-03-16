@@ -189,6 +189,17 @@ export function findUnbankedAreas(
     if (region_code && entry.region_code !== region_code) continue;
     if (servedMunis.has(code)) continue;
 
+    // SubMun entities (e.g. Manila city districts) inherit coverage from
+    // their parent city. BSP tags branches at city level, not district
+    // level, so districts always show 0 access points even though the
+    // parent city is heavily served. PSGC SubMun codes differ from their
+    // parent city at positions 5-6 (district ID); the parent city has
+    // "00000" at positions 5-9. Derive by taking the first 5 chars.
+    if (entry.level === "SubMun") {
+      const parentCityCode = code.slice(0, 5) + "00000";
+      if (servedMunis.has(parentCityCode)) continue;
+    }
+
     unbanked.push({
       psgc_code: code,
       area_name: entry.name,
