@@ -195,9 +195,11 @@ export function findUnbankedAreas(
     // parent city is heavily served. PSGC SubMun codes differ from their
     // parent city at positions 5-6 (district ID); the parent city has
     // "00000" at positions 5-9. Derive by taking the first 5 chars.
+    // Guard: only skip if derived parent is a known City in the dataset.
     if (entry.level === "SubMun") {
       const parentCityCode = code.slice(0, 5) + "00000";
-      if (servedMunis.has(parentCityCode)) continue;
+      const parent = pop[parentCityCode];
+      if (parent?.level === "City" && servedMunis.has(parentCityCode)) continue;
     }
 
     unbanked.push({

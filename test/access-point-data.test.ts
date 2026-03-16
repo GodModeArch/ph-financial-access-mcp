@@ -406,6 +406,64 @@ describe("findUnbankedAreas", () => {
     expect(tondo).toBeDefined();
     expect(tondo!.area_name).toBe("Tondo I/II");
   });
+
+  it("includes SubMun districts when derived parent code is not a City", () => {
+    // Simulate a SubMun whose derived parent code resolves to a non-City
+    // entry (e.g. a Province). The SubMun should NOT be skipped.
+    const popWithBadParent: PopulationLookup = {
+      ...MOCK_POPULATION,
+      "9990100000": {
+        name: "Fake SubMun",
+        level: "SubMun",
+        population: 100000,
+        region_code: "9900000000",
+        province_code: "9990000000",
+      },
+      // Derived parent "9990100000".slice(0,5)+"00000" = "9990100000" is itself,
+      // but let's set the real parent at "9990100000" -> slice = "99901" + "00000"
+      // which is "9990100000" (self). So use a different code structure:
+      "9990201000": {
+        name: "Orphan SubMun",
+        level: "SubMun",
+        population: 80000,
+        region_code: "9900000000",
+        province_code: "9990000000",
+      },
+      // Derived parent: "99902" + "00000" = "9990200000" -> Province, not City
+      "9990200000": {
+        name: "Fake Province Entry",
+        level: "Prov",
+        population: 500000,
+        region_code: "9900000000",
+        province_code: "9990200000",
+      },
+    };
+    // Add an access point so the province code is "served"
+    const apWithFakeServed: AccessPoint[] = [
+      ...MOCK_ACCESS_POINTS,
+      {
+        id: "99",
+        institution_name: "FAKE BANK",
+        branch_name: "FAKE",
+        industry: "BANK",
+        address: "Fake",
+        town: "FAKE TOWN",
+        province: "FAKE",
+        region: "FAKE REGION",
+        psgc_muni_code: "9990200000",
+        region_code: "9900000000",
+        province_code: "9990000000",
+        latitude: 0,
+        longitude: 0,
+        has_atm: false,
+      },
+    ];
+    const results = findUnbankedAreas(apWithFakeServed, popWithBadParent, {});
+    // "9990200000" is served but it's a Prov, not City, so SubMun should NOT be skipped
+    const orphan = results.find((r) => r.psgc_code === "9990201000");
+    expect(orphan).toBeDefined();
+    expect(orphan!.area_name).toBe("Orphan SubMun");
+  });
 });
 
 // --- findUnderservedAreas ---
