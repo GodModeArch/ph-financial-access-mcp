@@ -164,6 +164,7 @@ interface UnbankedParams {
 interface UnbankedArea {
   psgc_code: string;
   area_name: string;
+  province: string | null;
   population: number;
 }
 
@@ -202,9 +203,12 @@ export function findUnbankedAreas(
       if (parent?.level === "City" && servedMunis.has(parentCityCode)) continue;
     }
 
+    const provinceName = entry.province_code ? pop[entry.province_code]?.name ?? null : null;
+
     unbanked.push({
       psgc_code: code,
       area_name: entry.name,
+      province: provinceName,
       population: entry.population,
     });
   }
