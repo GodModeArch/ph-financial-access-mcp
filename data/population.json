@@ -3861,84 +3861,84 @@
     "level": "City",
     "population": 116652,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900703000": {
     "name": "Lantawan",
     "level": "Mun",
     "population": 48777,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900704000": {
     "name": "Maluso",
     "level": "Mun",
     "population": 66817,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900705000": {
     "name": "Sumisip",
     "level": "Mun",
     "population": 55778,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900706000": {
     "name": "Tipo-Tipo",
     "level": "Mun",
     "population": 32734,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900707000": {
     "name": "Tuburan",
     "level": "Mun",
     "population": 30027,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900708000": {
     "name": "Akbar",
     "level": "Mun",
     "population": 27911,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900709000": {
     "name": "Al-Barka",
     "level": "Mun",
     "population": 30318,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900710000": {
     "name": "Hadji Mohammad Ajul",
     "level": "Mun",
     "population": 32806,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900711000": {
     "name": "Ungkaya Pukan",
     "level": "Mun",
     "population": 31041,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900712000": {
     "name": "Hadji Muhtamad",
     "level": "Mun",
     "population": 30122,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1900713000": {
     "name": "Tabuan-Lasa",
     "level": "Mun",
     "population": 38964,
     "region_code": "1900000000",
-    "province_code": null
+    "province_code": "1900700000"
   },
   "1903600000": {
     "name": "Lanao del Sur",
@@ -3952,280 +3952,280 @@
     "level": "Mun",
     "population": 24381,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903602000": {
     "name": "Balabagan",
     "level": "Mun",
     "population": 31227,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903603000": {
     "name": "Balindong",
     "level": "Mun",
     "population": 40047,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903604000": {
     "name": "Bayang",
     "level": "Mun",
     "population": 30227,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903605000": {
     "name": "Binidayan",
     "level": "Mun",
     "population": 27031,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903606000": {
     "name": "Bubong",
     "level": "Mun",
     "population": 28733,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903607000": {
     "name": "Butig",
     "level": "Mun",
     "population": 25394,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903609000": {
     "name": "Ganassi",
     "level": "Mun",
     "population": 33897,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903610000": {
     "name": "Kapai",
     "level": "Mun",
     "population": 21630,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903611000": {
     "name": "Lumba-Bayabao",
     "level": "Mun",
     "population": 50959,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903612000": {
     "name": "Lumbatan",
     "level": "Mun",
     "population": 24988,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903613000": {
     "name": "Madalum",
     "level": "Mun",
     "population": 30044,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903614000": {
     "name": "Madamba",
     "level": "Mun",
     "population": 24886,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903615000": {
     "name": "Malabang",
     "level": "Mun",
     "population": 58377,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903616000": {
     "name": "Marantao",
     "level": "Mun",
     "population": 46233,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903617000": {
     "name": "City of Marawi",
     "level": "City",
     "population": 259993,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903618000": {
     "name": "Masiu",
     "level": "Mun",
     "population": 36803,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903619000": {
     "name": "Mulondo",
     "level": "Mun",
     "population": 23159,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903620000": {
     "name": "Pagayawan",
     "level": "Mun",
     "population": 15659,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903621000": {
     "name": "Piagapo",
     "level": "Mun",
     "population": 40558,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903622000": {
     "name": "Poona Bayabao",
     "level": "Mun",
     "population": 33307,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903623000": {
     "name": "Pualas",
     "level": "Mun",
     "population": 18020,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903624000": {
     "name": "Ditsaan-Ramain",
     "level": "Mun",
     "population": 26918,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903625000": {
     "name": "Saguiaran",
     "level": "Mun",
     "population": 28807,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903626000": {
     "name": "Tamparan",
     "level": "Mun",
     "population": 37190,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903627000": {
     "name": "Taraka",
     "level": "Mun",
     "population": 29558,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903628000": {
     "name": "Tubaran",
     "level": "Mun",
     "population": 17567,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903629000": {
     "name": "Tugaya",
     "level": "Mun",
     "population": 26283,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903630000": {
     "name": "Wao",
     "level": "Mun",
     "population": 51081,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903631000": {
     "name": "Marogong",
     "level": "Mun",
     "population": 33595,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903632000": {
     "name": "Calanogas",
     "level": "Mun",
     "population": 17585,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903633000": {
     "name": "Buadiposo-Buntong",
     "level": "Mun",
     "population": 23283,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903634000": {
     "name": "Maguing",
     "level": "Mun",
     "population": 37292,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903635000": {
     "name": "Picong",
     "level": "Mun",
     "population": 19296,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903636000": {
     "name": "Lumbayanague",
     "level": "Mun",
     "population": 21469,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903637000": {
     "name": "Amai Manabilang",
     "level": "Mun",
     "population": 14837,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903638000": {
     "name": "Tagoloan II",
     "level": "Mun",
     "population": 12843,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903639000": {
     "name": "Kapatagan",
     "level": "Mun",
     "population": 23228,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903640000": {
     "name": "Sultan Dumalondong",
     "level": "Mun",
     "population": 12984,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1903641000": {
     "name": "Lumbaca-Unayan",
     "level": "Mun",
     "population": 8768,
     "region_code": "1900000000",
-    "province_code": "1903000000"
+    "province_code": "1903600000"
   },
   "1907000000": {
     "name": "Tawi-Tawi",
@@ -4323,91 +4323,91 @@
     "level": "Mun",
     "population": 43301,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908702000": {
     "name": "Buldon",
     "level": "Mun",
     "population": 45676,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908703000": {
     "name": "City of Cotabato",
     "level": "City",
     "population": 383383,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908704000": {
     "name": "Datu Blah T. Sinsuat",
     "level": "Mun",
     "population": 32088,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908705000": {
     "name": "Datu Odin Sinsuat",
     "level": "Mun",
     "population": 152907,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908706000": {
     "name": "Kabuntalan",
     "level": "Mun",
     "population": 31863,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908707000": {
     "name": "Matanog",
     "level": "Mun",
     "population": 41146,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908708000": {
     "name": "Northern Kabuntalan",
     "level": "Mun",
     "population": 30332,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908709000": {
     "name": "Parang",
     "level": "Mun",
     "population": 123209,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908710000": {
     "name": "Sultan Kudarat",
     "level": "Mun",
     "population": 124965,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908711000": {
     "name": "Sultan Mastura",
     "level": "Mun",
     "population": 30828,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908712000": {
     "name": "Talitay",
     "level": "Mun",
     "population": 19750,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908713000": {
     "name": "Upi",
     "level": "Mun",
     "population": 65363,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908700000"
   },
   "1908800000": {
     "name": "Maguindanao del Sur",
@@ -4421,168 +4421,168 @@
     "level": "Mun",
     "population": 31560,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908802000": {
     "name": "Buluan",
     "level": "Mun",
     "population": 60931,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908803000": {
     "name": "Datu Abdullah Sangki",
     "level": "Mun",
     "population": 35274,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908804000": {
     "name": "Datu Anggal Midtimbang",
     "level": "Mun",
     "population": 35243,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908805000": {
     "name": "Datu Hoffer Ampatuan",
     "level": "Mun",
     "population": 27678,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908806000": {
     "name": "Datu Paglas",
     "level": "Mun",
     "population": 38446,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908807000": {
     "name": "Datu Piang",
     "level": "Mun",
     "population": 31063,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908808000": {
     "name": "Datu Salibo",
     "level": "Mun",
     "population": 21295,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908809000": {
     "name": "Datu Saudi Ampatuan",
     "level": "Mun",
     "population": 33374,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908810000": {
     "name": "Datu Unsay",
     "level": "Mun",
     "population": 17186,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908811000": {
     "name": "Gen. S.K. Pendatun",
     "level": "Mun",
     "population": 33710,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908812000": {
     "name": "Guindulungan",
     "level": "Mun",
     "population": 28471,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908813000": {
     "name": "Mamasapano",
     "level": "Mun",
     "population": 32831,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908814000": {
     "name": "Mangudadatu",
     "level": "Mun",
     "population": 28511,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908815000": {
     "name": "Pagagawan",
     "level": "Mun",
     "population": 42181,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908816000": {
     "name": "Pagalungan",
     "level": "Mun",
     "population": 49326,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908817000": {
     "name": "Paglat",
     "level": "Mun",
     "population": 21317,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908818000": {
     "name": "Pandag",
     "level": "Mun",
     "population": 29244,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908819000": {
     "name": "Rajah Buayan",
     "level": "Mun",
     "population": 31329,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908820000": {
     "name": "Shariff Aguak",
     "level": "Mun",
     "population": 37437,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908821000": {
     "name": "Shariff Saydona Mustapha",
     "level": "Mun",
     "population": 29707,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908822000": {
     "name": "South Upi",
     "level": "Mun",
     "population": 50018,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908823000": {
     "name": "Sultan Sa Barongis",
     "level": "Mun",
     "population": 27929,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1908824000": {
     "name": "Talayan",
     "level": "Mun",
     "population": 39182,
     "region_code": "1900000000",
-    "province_code": "1908000000"
+    "province_code": "1908800000"
   },
   "1999901000": {
     "name": "Kapalawan",
@@ -12290,5 +12290,12 @@
     "population": 1018849,
     "region_code": "0900000000",
     "province_code": "0931000000"
+  },
+  "1999000000": {
+    "name": "Special Geographic Area",
+    "level": "Prov",
+    "population": 214703,
+    "region_code": "1900000000",
+    "province_code": null
   }
 }
